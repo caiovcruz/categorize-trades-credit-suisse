@@ -1,0 +1,12 @@
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\bin\Debug\net6.0\CategorizeTradesCreditSuisseDomain.deps.json
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\bin\Debug\net6.0\CategorizeTradesCreditSuisseDomain.dll
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\bin\Debug\net6.0\CategorizeTradesCreditSuisseDomain.pdb
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.csproj.AssemblyReference.cache
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.AssemblyInfoInputs.cache
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.AssemblyInfo.cs
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.csproj.CoreCompileInputs.cache
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.dll
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\refint\CategorizeTradesCreditSuisseDomain.dll
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\CategorizeTradesCreditSuisseDomain.pdb
+C:\Users\covu\source\repos\CreditSuisse\CategorizeTradesCreditSuisse\CategorizeTradesCreditSuisseDomain\obj\Debug\net6.0\ref\CategorizeTradesCreditSuisseDomain.dll
