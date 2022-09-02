@@ -43,9 +43,10 @@ for (int i = 0; i < numberOfTrades; i++)
     while (!validInfos)
     {
         Console.WriteLine($"[Value] [Client's Sector ({string.Join(',', Enum.GetNames<ClientSectors>())})] [Next Payment (mm/dd/yyyy)]");
+        var tradeProperties = typeof(Trade).GetProperties().ToList();
         var trade = Console.ReadLine()?.Split(' ');
 
-        if (trade?.Length == 3)
+        if (trade?.Length == tradeProperties?.Count)
         {
             var tradeValidated = TradeValidator.ValidateTrade(trade[0], trade[1], trade[2]);
 

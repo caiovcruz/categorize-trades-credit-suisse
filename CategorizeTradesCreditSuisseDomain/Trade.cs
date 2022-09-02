@@ -23,13 +23,13 @@ namespace CategorizeTradesCreditSuisseDomain
             var handleCategoryTypes = AppDomain.CurrentDomain
                                                 .GetAssemblies()
                                                 .SelectMany(assembly => assembly.GetTypes())
-                                                .Where(type => typeof(IHandleCategory).IsAssignableFrom(type) && type.IsClass);
+                                                .Where(type => typeof(IHandleCategory).IsAssignableFrom(type) && type.IsClass && !type.IsAbstract);
 
             foreach (var handleCategory in handleCategoryTypes)
             {
-                if (Activator.CreateInstance(handleCategory) is IHandleCategory handleImplementation)
+                if (Activator.CreateInstance(handleCategory, referenceDate, trade) is IHandleCategory handleImplementation)
                 {
-                    var categoryDisplayed = handleImplementation.DisplayTradeCategory(referenceDate, trade);
+                    var categoryDisplayed = handleImplementation.DisplayTradeCategory();
 
                     if (categoryDisplayed)
                         return;

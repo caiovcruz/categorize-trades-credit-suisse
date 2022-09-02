@@ -4,6 +4,15 @@ namespace CategorizeTradesCreditSuisseDomain
 {
     public interface IHandleCategory
     {
-        bool DisplayTradeCategory(DateTime referenceDate, ITrade trade);
+        DateTime ReferenceDate { get; }
+        ITrade Trade { get; }
+
+        bool DisplayTradeCategory();
+
+        public bool IsExpiredTrade();
+
+        public bool IsHighriskTrade();
+
+        public bool IsMediumriskTrade();
     }
 }

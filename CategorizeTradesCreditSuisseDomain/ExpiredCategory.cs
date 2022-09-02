@@ -3,12 +3,14 @@ using CategorizeTradesCreditSuisseDomain.Interface;
 
 namespace CategorizeTradesCreditSuisseDomain
 {
-    public class ExpiredCategory : IHandleCategory
+    public class ExpiredCategory : HandleCategory
     {
-        public bool DisplayTradeCategory(DateTime referenceDate, ITrade trade)
+        public ExpiredCategory(DateTime referenceDate, ITrade trade) : base(referenceDate, trade) { }
+
+        public override bool DisplayTradeCategory()
         {
             //EXPIRED
-            if ((referenceDate - trade.NextPaymentDate).Days > 30)
+            if (IsExpiredTrade())
             {
                 Console.WriteLine(Categories.EXPIRED.ToString());
                 return true;

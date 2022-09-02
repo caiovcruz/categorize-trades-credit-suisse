@@ -3,14 +3,14 @@ using CategorizeTradesCreditSuisseDomain.Interface;
 
 namespace CategorizeTradesCreditSuisseDomain
 {
-    public class MediumriskCategory : IHandleCategory
+    public class MediumriskCategory : HandleCategory
     {
+        public MediumriskCategory(DateTime referenceDate, ITrade trade) : base(referenceDate, trade) { }
 
-        public bool DisplayTradeCategory(DateTime referenceDate, ITrade trade)
+        public override bool DisplayTradeCategory()
         {
             //MEDIUMRISK
-            if (trade.Value > 1000000 &&
-                trade.ClientSector.Equals(ClientSectors.Public.ToString(), StringComparison.OrdinalIgnoreCase))
+            if (IsMediumriskTrade())
             {
                 Console.WriteLine(Categories.MEDIUMRISK.ToString());
                 return true;

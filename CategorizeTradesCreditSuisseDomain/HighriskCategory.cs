@@ -3,13 +3,14 @@ using CategorizeTradesCreditSuisseDomain.Interface;
 
 namespace CategorizeTradesCreditSuisseDomain
 {
-    public class HighriskCategory : IHandleCategory
+    public class HighriskCategory : HandleCategory
     {
-        public bool DisplayTradeCategory(DateTime referenceDate, ITrade trade)
+        public HighriskCategory(DateTime referenceDate, ITrade trade) : base(referenceDate, trade) { }
+
+        public override bool DisplayTradeCategory()
         {
             //HIGHRISK
-            if (trade.Value > 1000000 &&
-                trade.ClientSector.Equals(ClientSectors.Private.ToString(), StringComparison.OrdinalIgnoreCase))
+            if (IsHighriskTrade())
             {
                 Console.WriteLine(Categories.HIGHRISK.ToString());
                 return true;
