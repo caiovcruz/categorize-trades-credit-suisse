@@ -5,5 +5,6 @@
         EXPIRED,
         HIGHRISK,
         MEDIUMRISK,
+        PEP,
     }
 }

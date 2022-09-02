@@ -14,5 +14,7 @@ namespace CategorizeTradesCreditSuisseDomain
         public bool IsHighriskTrade();
 
         public bool IsMediumriskTrade();
+
+        public bool IsPEPTrade();
     }
 }

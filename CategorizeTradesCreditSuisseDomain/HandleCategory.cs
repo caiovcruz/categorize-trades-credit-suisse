@@ -21,16 +21,20 @@ namespace CategorizeTradesCreditSuisseDomain
             return false;
         }
 
-        public bool IsExpiredTrade() => (ReferenceDate - Trade.NextPaymentDate).Days > 30;
+        public bool IsExpiredTrade() => (ReferenceDate - Trade.NextPaymentDate).Days > 30 && !IsPEPTrade();
 
         public bool IsHighriskTrade() => Trade.Value > 1000000 &&
                                               Trade.ClientSector.Equals(ClientSectors.Private.ToString(),
                                                                         StringComparison.OrdinalIgnoreCase)
-                                                               && !IsExpiredTrade();
+                                                               && !IsExpiredTrade()
+                                                               && !IsPEPTrade();
 
         public bool IsMediumriskTrade() => Trade.Value > 1000000 &&
                                               Trade.ClientSector.Equals(ClientSectors.Public.ToString(),
                                                                         StringComparison.OrdinalIgnoreCase)
-                                                               && !IsExpiredTrade();
+                                                               && !IsExpiredTrade()
+                                                               && !IsPEPTrade();
+
+        public bool IsPEPTrade() => Trade.IsPoliticallyExposed;
     }
 }

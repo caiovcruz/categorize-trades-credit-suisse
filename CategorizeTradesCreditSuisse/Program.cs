@@ -42,13 +42,13 @@ for (int i = 0; i < numberOfTrades; i++)
     var validInfos = false;
     while (!validInfos)
     {
-        Console.WriteLine($"[Value] [Client's Sector ({string.Join(',', Enum.GetNames<ClientSectors>())})] [Next Payment (mm/dd/yyyy)]");
+        Console.WriteLine($"[Value] [Client's Sector ({string.Join(',', Enum.GetNames<ClientSectors>())})] [Next Payment (mm/dd/yyyy)] [IsPoliticallyExposed (true,false)]");
         var tradeProperties = typeof(Trade).GetProperties().ToList();
         var trade = Console.ReadLine()?.Split(' ');
 
         if (trade?.Length == tradeProperties?.Count)
         {
-            var tradeValidated = TradeValidator.ValidateTrade(trade[0], trade[1], trade[2]);
+            var tradeValidated = TradeValidator.ValidateTrade(trade[0], trade[1], trade[2], trade[3]);
 
             if (tradeValidated != null)
             {

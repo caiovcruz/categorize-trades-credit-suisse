@@ -4,11 +4,12 @@ namespace CategorizeTradesCreditSuisseDomain
 {
     public class Trade : ITrade
     {
-        public Trade(double value, string clientSector, DateTime nextPaymentDate)
+        public Trade(double value, string clientSector, DateTime nextPaymentDate, bool isPoliticallyExposed)
         {
             Value = value;
             ClientSector = clientSector;
             NextPaymentDate = nextPaymentDate;
+            IsPoliticallyExposed = isPoliticallyExposed;
         }
 
         public double Value { get; }
@@ -16,6 +17,8 @@ namespace CategorizeTradesCreditSuisseDomain
         public string ClientSector { get; }
 
         public DateTime NextPaymentDate { get; }
+
+        public bool IsPoliticallyExposed { get; }
 
         public void HandleTradeCategory(ITrade trade, DateTime referenceDate)
         {
